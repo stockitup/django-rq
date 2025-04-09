@@ -1,4 +1,4 @@
-{% extends "admin/change_list.html" %}
+{% extends "admin/base_site.html" %}
 
 {% load static django_rq %}
 
@@ -138,7 +138,7 @@
                 <div class = "flex-container">
                     <label>Args:</label>
                     <div>
-                    
+
                         {% if data_is_valid %}
                             {% if job.args %}
                             <ul>
@@ -159,7 +159,7 @@
             <div>
                 <div class = "flex-container">
                     <label>Kwargs:</label>
-                    <div>                    
+                    <div>
                         {% if data_is_valid %}
                             {% if job.kwargs %}
                                 <ul>
