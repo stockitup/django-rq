@@ -159,8 +159,8 @@ def get_executions(queue, composite_keys: List[str]) -> List[Execution]:
     """
     executions = []
     for key in composite_keys:
-        job_id, id = key.split(':')
         try:
+            job_id, id = key.split(':')
             executions.append(Execution.fetch(id=id, job_id=job_id, connection=queue.connection))
         except ValueError:
             pass
